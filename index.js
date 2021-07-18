@@ -7,6 +7,8 @@ app.use(bodyParser.json());
 const moment = require('moment');
 const getWeek = require('./utils/getWeek');
 const DATE_FORMAT = require('./constants/DateFormat');
+const cors = require('cors');
+app.use(cors());
 
 // GET /week/:weekNumber/:year
 app.get('/week/:weekNumber/:year', async (req, res) => {
